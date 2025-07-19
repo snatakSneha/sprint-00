@@ -13,7 +13,7 @@ Programming Language
 
 | Author      | Created on | Version   | Last updated by | Last edited on |
 | ----------- | ---------- | --------- | --------------- | -------------- |
-| Sneha Joshi | 18-07-25   | version 1 | 18-07-2025      | 18-07-25       |
+| Sneha Joshi | 18-07-25   | version 1 | Sneha Joshi     | 18-07-25       |
 
 ---
 
