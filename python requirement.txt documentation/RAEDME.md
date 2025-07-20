@@ -12,17 +12,19 @@
 
 ## Table of Content
 
-1. [Introduction](#introduction)
-2. [What is requirements.txt](#what-is-requirementstxt)
-3. [Why Use requirements.txt](#why-use-requirementstxt)
-4. [How to Create and Use requirements.txt](#how-to-create-and-use-requirementstxt)
+1. [Introduction](#introduction)  
+2. [What is requirements.txt](#what-is-requirementstxt)  
+3. [Why Use requirements.txt](#why-use-requirementstxt)  
+4. [How to Create and Use requirements.txt](#how-to-create-and-use-requirementstxt)  
 5. [Use Cases](#use-cases)  
 6. [Best Practices](#best-practices)  
-7. [Syntax of requirements.txt](#syntax-of-requirementstxt)
-8. [Difference Between pip with requirements.txt and pip for single module](#difference-between-pip-with-requirementstxt-and-pip-for-single-module)
-9. [Conclusion](#conclusion)  
-10. [Contacts](#contacts)  
-11. [References](#references)  
+7. [Syntax of requirements.txt](#syntax-of-requirementstxt)  
+8. [Difference Between pip with requirements.txt and pip for single module](#difference-between-pip-with-requirementstxt-and-pip-for-single-module)  
+9. [FAQs](#faqs)  
+10. [Conclusion](#conclusion)  
+11. [Contacts](#contacts)  
+12. [References](#references)  
+
 
 ---
 
@@ -251,7 +253,71 @@ sqlalchemy>=1.4 \
 | *Dependency Tracking*  | Can include pinned versions, hashes, and comments                  | Tracks only what’s installed at that moment                  |
 | *Automation*           | Easily integrates with CI/CD tools for automation                  | Less structured for automation                              |
 
+
 ---
+
+## FAQs
+
+### 1. **Can I use multiple requirements files for different environments?**
+
+Yes. You can separate files like:
+
+* `requirements.txt` → Production dependencies
+* `dev-requirements.txt` → Development and testing tools
+  Then include them accordingly:
+
+```bash
+pip install -r requirements.txt
+pip install -r dev-requirements.txt
+```
+
+---
+
+### 2. **How do I update a specific package and reflect that in requirements.txt?**
+
+1. Update the package:
+
+```bash
+pip install --upgrade package-name
+```
+
+2. Regenerate the file:
+
+```bash
+pip freeze > requirements.txt
+```
+
+---
+
+### 3. **What happens if a package is missing from requirements.txt?**
+
+If a dependency is not listed, it won't be installed during setup, which can cause runtime errors like `ModuleNotFoundError`. Always keep the file updated using `pip freeze`.
+
+
+---
+
+### 4. **How can I install only dev tools for local testing?**
+
+If you’ve separated dev tools in `dev-requirements.txt`, just run:
+
+```bash
+pip install -r dev-requirements.txt
+```
+
+---
+
+### 5. **What is the difference between `pip freeze` and `pip list`?**
+
+| Command      | Purpose                                                |
+| ------------ | ------------------------------------------------------ |
+| `pip list`   | Shows installed packages and versions (human-readable) |
+| `pip freeze` | Outputs in `requirements.txt` format (machine-usable)  |
+
+---
+
+
+
+
 
 ## Conclusion
 
