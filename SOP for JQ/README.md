@@ -168,18 +168,18 @@ jq '.user.roles[0]' data.json
 ---
 
 ## Use cases
-| Scenario | How jq Helps |
+| **Scenario** | **How jq Helps** |
 |----------|---------------|
-| Log Analysis in DevOps Pipelines | Quickly extract and format key data from JSON-formatted logs or API responses for monitoring tools. |
-| REST API Response Parsing | Process JSON outputs from curl or other HTTP clients to extract relevant fields programmatically. |
-| CI/CD Workflow Automation | Use in scripts to parse build metadata, environment variables, or deployment status in JSON format. |
-| Configuration File Manipulation | Read or validate JSON-based config files used by tools like Docker Compose, Terraform, or Kubernetes. |
-| Database Migration or Sync Scripts | Parse and transform JSON data exported from NoSQL databases like MongoDB for further automation. |
-| Security Auditing | Filter large JSON outputs from security tools (e.g., AWS Inspector, audit logs) to extract vulnerabilities. |
-| Cloud Resource Management | Process JSON responses from AWS CLI, Azure CLI, or GCP CLI to summarize or report resource states.|
-| Data Transformation in ETL Pipelines | Clean, reshape, or enrich incoming JSON data as part of Extract-Transform-Load workflows. |
-| Debugging Microservices | Decode structured log files or API payloads from microservices communicating in JSON. |
-| Infrastructure as Code (IaC) Audits | Validate and inspect JSON-based state files from Terraform or CloudFormation. |
+| **Log Analysis in DevOps Pipelines** | Quickly extract and format key data from JSON-formatted logs or API responses for monitoring tools. |
+| **REST API Response Parsing** | Process JSON outputs from curl or other HTTP clients to extract relevant fields programmatically. |
+| **CI/CD Workflow Automation** | Use in scripts to parse build metadata, environment variables, or deployment status in JSON format. |
+| **Configuration File Manipulation** | Read or validate JSON-based config files used by tools like Docker Compose, Terraform, or Kubernetes. |
+| **Database Migration or Sync Scripts** | Parse and transform JSON data exported from NoSQL databases like MongoDB for further automation. |
+| **Security Auditing** | Filter large JSON outputs from security tools (e.g., AWS Inspector, audit logs) to extract vulnerabilities. |
+| **Cloud Resource Management** | Process JSON responses from AWS CLI, Azure CLI, or GCP CLI to summarize or report resource states.|
+| **Data Transformation in ETL Pipelines** | Clean, reshape, or enrich incoming JSON data as part of Extract-Transform-Load workflows. |
+| **Debugging Microservices** | Decode structured log files or API payloads from microservices communicating in JSON. |
+| **Infrastructure as Code (IaC) Audits** | Validate and inspect JSON-based state files from Terraform or CloudFormation. |
 
 ---
 
@@ -196,9 +196,9 @@ jq '.' data.json
 ```
 > jq: error: Could not open file data.json: No such file or directory
 
+**Cause:** File data.json doesn't exist in the current directory.
 
-*Cause:* File data.json doesn't exist in the current directory. 
-*Fix:* Ensure the file is present and the path is correct.
+**Fix:** Ensure the file is present and the path is correct.
 
 ---
 
@@ -210,8 +210,9 @@ cat broken.json | jq '.'
 > parse error: Unfinished JSON...
 
 
-*Cause:* The JSON file is not properly formatted (e.g., missing commas, brackets, quotes).  
-*Fix:* Validate the JSON using a linter or online JSON validator before using jq.
+**Cause:** The JSON file is not properly formatted (e.g., missing commas, brackets, quotes). 
+
+**Fix:** Validate the JSON using a linter or online JSON validator before using jq.
 
 ---
 
@@ -223,8 +224,9 @@ jq '.user.phone' data.json
 > null
 
 
-*Cause:* The queried field does not exist in the JSON.  
-*Fix:* Double-check the field name and structure. Use jq 'keys' or jq '.' to inspect structure first.
+**Cause:** The queried field does not exist in the JSON.  
+
+**Fix:** Double-check the field name and structure. Use jq 'keys' or jq '.' to inspect structure first.
 
 ---
 
@@ -236,8 +238,9 @@ jq '.user.roles[5]' data.json
 > null
 
 
-*Cause:* You're accessing an index that doesn’t exist in the array.  
-*Fix:* Use jq '.user.roles | length' to verify array size before indexing.
+**Cause:** You're accessing an index that doesn’t exist in the array.  
+
+**Fix:** Use jq '.user.roles | length' to verify array size before indexing.
 
 ---
 
@@ -249,8 +252,9 @@ jq '.' /root/data.json
 > jq: error: Could not open file /root/data.json: Permission denied
 
 
-*Cause:* File is not readable by the current user.  
-*Fix:* Run with elevated permissions (e.g., sudo) or change file permissions.
+**Cause:** File is not readable by the current user.  
+
+**Fix:** Run with elevated permissions (e.g., sudo) or change file permissions.
 
 ---
 
