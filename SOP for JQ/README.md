@@ -46,18 +46,18 @@ This documentation outlines practical value of the jq command-line tool, highlig
 
 ## Installation Guide
 
-### Check for Existing Installation
+- ### Check for Existing Installation
 
-*Before installing, check if jq is already present:*
+Before installing, check if jq is already present:
 
 ```bash
 jq --version
 ```
 ![image](https://github.com/user-attachments/assets/ba0e1885-a62b-4aac-8292-5bec740402c5)
 
-*If this command returns a version (e.g., jq-1.6), you already have it installed.*
+If this command returns a version (e.g., jq-1.6), you already have it installed.
 
-- #### Ubuntu
+- ### Ubuntu
 > Update your system 
 
 ```bash
@@ -69,14 +69,14 @@ sudo apt install jq -y
 
 ![image](https://github.com/user-attachments/assets/2cfce514-70b5-426e-8a2f-8951b4a88035)
 
-- #### RedHat
+- ### RedHat
 
 ```bash
 sudo yum install epel-release -y
 sudo yum install jq -y
 ```
 
-- #### macOS
+- ### macOS
 
 ```bash
 brew install jq
@@ -86,7 +86,7 @@ brew install jq
 
 ## Example JSON Data
 
-*Save the following content in a file called data.json for practice:*
+Save the following content in a file called data.json for practice:
 
 ```json
 {
@@ -116,7 +116,7 @@ brew install jq
 ```bash
 cat data.json | jq '.'
 ```
-*Prints the entire contents of the JSON file in a human-readable and color-formatted layout.*
+Prints the entire contents of the JSON file in a human-readable and color-formatted layout.
 
 ![image](https://github.com/user-attachments/assets/559b24f4-8ff8-4580-b58f-d5193974c0cd)
 
@@ -125,7 +125,7 @@ cat data.json | jq '.'
 ```bash
 jq '.user.name' data.json
 ```
-*Extracts and displays the value of the name field nested inside the user object.*
+Extracts and displays the value of the name field nested inside the user object.
 
 ![image](https://github.com/user-attachments/assets/9b28d42b-3a56-4f42-8177-facc26df5ec3)
 
@@ -138,7 +138,7 @@ jq '.user.name' data.json
 ```bash
 jq '.user.address.city' data.json
 ```
-*Accesses the nested city field inside address, which is itself a key inside the user object.*
+Accesses the nested city field inside address, which is itself a key inside the user object.
 
 ![image](https://github.com/user-attachments/assets/38aa411d-b038-480c-9c99-9693025cfbf5)
 
@@ -147,7 +147,7 @@ jq '.user.address.city' data.json
 ```bash
 jq '.items[] | .name' data.json
 ```
-*Iterates over each object in the items array and returns the value of the name key for each item.*
+Iterates over each object in the items array and returns the value of the name key for each item.
 
 ![image](https://github.com/user-attachments/assets/390601ae-ae3c-4f76-b494-99580d00cabc)
 
@@ -160,7 +160,7 @@ jq '.items[] | .name' data.json
 jq '.user.roles[0]' data.json
 ```
 
-*Retrieves the first element (index 0) from the roles array within the user object.*
+Retrieves the first element (index 0) from the roles array within the user object.
 
 ![image](https://github.com/user-attachments/assets/7b319199-c581-4c54-aee2-014827748901)
 
@@ -271,5 +271,5 @@ jq bridges the gap between human-readable JSON and machine-level automation need
 | *Title*                        | *Link*                                        |
 |----------------------------------|-------------------------------------------------|
 | Official jq Manual | [Visit](https://stedolan.github.io/jq/manual/)  |
-| jq GitHub Releases | [Visit](https://github.com/stedolan/jq/releases)  |
+| jq GitHub Releases | [Visit](https://github.com/jqlang/jq/blob/master/)  |
 
