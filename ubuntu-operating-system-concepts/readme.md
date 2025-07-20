@@ -53,12 +53,12 @@ Ubuntu is a Debian-based Linux operating system known for its ease of use, regul
 
 ## Why Use Ubuntu?
 
-1. **Open Source**: Freely available, with active community contributions.
-2. **User Friendly**: Simple installation process and intuitive desktop interface.
-3. **Secure**: Includes built-in firewall, encryption, and regular security updates.
-4. **Regular Releases**: Long-Term Support (LTS) versions released every two years with five years of maintenance.
-5. **Versatile**: Suitable for development, production, cloud, and personal use.
-6. **Community and Support**: Extensive documentation and user forums available.
+* **Open Source**: Freely available, with active community contributions.
+* **User Friendly**: Simple installation process and intuitive desktop interface.
+* **Secure**: Includes built-in firewall, encryption, and regular security updates.
+* **Regular Releases**: Long-Term Support (LTS) versions released every two years with five years of maintenance.
+* **Versatile**: Suitable for development, production, cloud, and personal use.
+* **Community and Support**: Extensive documentation and user forums available.
 
 ---
 
