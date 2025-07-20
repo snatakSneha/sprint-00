@@ -1,5 +1,7 @@
 # SOP for JQ – JSON Query Processor
 
+<img width="1400" height="545" alt="image" src="https://github.com/user-attachments/assets/3fdcf4de-19ba-45ef-81ae-940844528a6e" />
+
 ---
 
 ### Author
