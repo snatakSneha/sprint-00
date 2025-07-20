@@ -114,6 +114,7 @@ Save the following content in a file called data.json for practice:
 ```bash
 cat data.json | jq '.'
 ```
+<img width="704" height="553" alt="Screenshot from 2025-07-20 22-52-22" src="https://github.com/user-attachments/assets/368c9930-f8b7-478e-a71f-343f8084d09b" />
 
 
 
@@ -124,7 +125,7 @@ cat data.json | jq '.'
 jq '.user.name' data.json
 ```
 
-![image](https://github.com/user-attachments/assets/9b28d42b-3a56-4f42-8177-facc26df5ec3)
+<img width="704" height="81" alt="image" src="https://github.com/user-attachments/assets/a1c55b86-7aa1-477c-aec2-85587ae176e1" />
 
 ---
 
@@ -137,8 +138,8 @@ jq '.user.name' data.json
 jq '.user.address.city' data.json
 ```
 
+<img width="742" height="81" alt="image" src="https://github.com/user-attachments/assets/6bee917a-5075-4e8e-a8c7-bb096af82520" />
 
-![image](https://github.com/user-attachments/assets/38aa411d-b038-480c-9c99-9693025cfbf5)
 
 - ### Loop Over Arrays
 > Iterates over each object in the items array and returns the value of the name key for each item.
@@ -147,7 +148,7 @@ jq '.user.address.city' data.json
 jq '.items[] | .name' data.json
 ```
 
-![image](https://github.com/user-attachments/assets/390601ae-ae3c-4f76-b494-99580d00cabc)
+<img width="723" height="104" alt="image" src="https://github.com/user-attachments/assets/c1fab1a4-7d1f-4743-ae60-378af885961e" />
 
 
 - ### Search by Index Value
@@ -159,8 +160,7 @@ jq '.items[] | .name' data.json
 jq '.user.roles[0]' data.json
 ```
 
-
-![image](https://github.com/user-attachments/assets/7b319199-c581-4c54-aee2-014827748901)
+<img width="723" height="80" alt="image" src="https://github.com/user-attachments/assets/877c1cd1-1f09-47d9-ae0d-443a2446b1c3" />
 
 
 ---
@@ -191,9 +191,9 @@ This section outlines common issues users may encounter when using jq and how to
 
 ```bash
 jq '.' data.json
-
-jq: error: Could not open file data.json: No such file or directory
 ```
+> jq: error: Could not open file data.json: No such file or directory
+
 
 *Cause:* File data.json doesn't exist in the current directory. 
 *Fix:* Ensure the file is present and the path is correct.
@@ -204,9 +204,9 @@ jq: error: Could not open file data.json: No such file or directory
 
 ```bash
 cat broken.json | jq '.'
-
-parse error: Unfinished JSON...
 ```
+> parse error: Unfinished JSON...
+
 
 *Cause:* The JSON file is not properly formatted (e.g., missing commas, brackets, quotes).  
 *Fix:* Validate the JSON using a linter or online JSON validator before using jq.
@@ -217,9 +217,9 @@ parse error: Unfinished JSON...
 
 ```bash
 jq '.user.phone' data.json
-
-null
 ```
+> null
+
 
 *Cause:* The queried field does not exist in the JSON.  
 *Fix:* Double-check the field name and structure. Use jq 'keys' or jq '.' to inspect structure first.
@@ -230,9 +230,9 @@ null
 
 ```bash
 jq '.user.roles[5]' data.json
-
-null
 ```
+> null
+
 
 *Cause:* You're accessing an index that doesn’t exist in the array.  
 *Fix:* Use jq '.user.roles | length' to verify array size before indexing.
@@ -243,9 +243,9 @@ null
 
 ```bash
 jq '.' /root/data.json
-
-jq: error: Could not open file /root/data.json: Permission denied
 ```
+> jq: error: Could not open file /root/data.json: Permission denied
+
 
 *Cause:* File is not readable by the current user.  
 *Fix:* Run with elevated permissions (e.g., sudo) or change file permissions.
