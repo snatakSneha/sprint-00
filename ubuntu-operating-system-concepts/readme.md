@@ -4,9 +4,11 @@
 
 ---
 
-| Author      | Created on | Version   | Last updated by | Last edited on |
-| ----------- | ---------- | --------- | --------------- | -------------- |
-| Sneha Joshi | 16-07-25   | version 1 | Sneha Joshi     | 17-07-25       |
+### Author Metadata
+
+| Created     | Version | Author        | Modifed | Comment           | Reviewer         |
+|-------------|---------|---------------|-------|------------|------------------|
+| 17-07-2025  |  V1     | Sneha Joshi   | 17-07-2025 | Internal Review   | Siddharth Pawar  |
 
 ---
 
