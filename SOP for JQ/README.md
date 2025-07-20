@@ -47,27 +47,24 @@ This documentation outlines practical value of the jq command-line tool, highlig
 ## Installation Guide
 
 - ### Check for Existing Installation
-
-Before installing, check if jq is already present:
+  > Before installing, check if jq is already present:
 
 ```bash
 jq --version
 ```
-![image](https://github.com/user-attachments/assets/ba0e1885-a62b-4aac-8292-5bec740402c5)
+
 
 If this command returns a version (e.g., jq-1.6), you already have it installed.
 
 - ### Ubuntu
-> Update your system 
+  > Update your system 
 
 ```bash
 sudo apt install jq -y
 ```
 
-![image](https://github.com/user-attachments/assets/a03f59b7-09cb-4c40-9a96-d897e00845cb)
+<img width="1316" height="223" alt="Screenshot from 2025-07-20 22-38-02" src="https://github.com/user-attachments/assets/8925ee80-521a-4e8a-8f18-2a432422dd98" />
 
-
-![image](https://github.com/user-attachments/assets/2cfce514-70b5-426e-8a2f-8951b4a88035)
 
 - ### RedHat
 
@@ -91,11 +88,11 @@ Save the following content in a file called data.json for practice:
 ```json
 {
   "user": {
-    "name": "Alice",
+    "name": "Sneha",
     "roles": ["admin", "editor"],
-    "age": 30,
+    "age": 21,
     "address": {
-      "city": "New York",
+      "city": "Haldwani",
       "zip": "10001"
     }
   },
@@ -105,27 +102,27 @@ Save the following content in a file called data.json for practice:
   ]
 }
 ```
-![image](https://github.com/user-attachments/assets/6ce30a9a-3f01-4313-aed0-eb9425f2e46a)
+<img width="674" height="428" alt="Screenshot from 2025-07-20 22-46-57" src="https://github.com/user-attachments/assets/3613fbbe-6d8a-4667-a078-f929a9f1f123" />
 
 ---
 
 ## Basic Usage
 
 - ### View Entire JSON
+  > Prints the entire contents of the JSON file in a human-readable and color-formatted layout.
 
 ```bash
 cat data.json | jq '.'
 ```
-Prints the entire contents of the JSON file in a human-readable and color-formatted layout.
 
-![image](https://github.com/user-attachments/assets/559b24f4-8ff8-4580-b58f-d5193974c0cd)
+
 
 - ### Filter a Field
+> Extracts and displays the value of the name field nested inside the user object.
 
 ```bash
 jq '.user.name' data.json
 ```
-Extracts and displays the value of the name field nested inside the user object.
 
 ![image](https://github.com/user-attachments/assets/9b28d42b-3a56-4f42-8177-facc26df5ec3)
 
@@ -134,20 +131,21 @@ Extracts and displays the value of the name field nested inside the user object.
 ## Advanced Queries
 
 - ### Access Nested Values
+> Accesses the nested city field inside address, which is itself a key inside the user object.
 
 ```bash
 jq '.user.address.city' data.json
 ```
-Accesses the nested city field inside address, which is itself a key inside the user object.
+
 
 ![image](https://github.com/user-attachments/assets/38aa411d-b038-480c-9c99-9693025cfbf5)
 
 - ### Loop Over Arrays
+> Iterates over each object in the items array and returns the value of the name key for each item.
 
 ```bash
 jq '.items[] | .name' data.json
 ```
-Iterates over each object in the items array and returns the value of the name key for each item.
 
 ![image](https://github.com/user-attachments/assets/390601ae-ae3c-4f76-b494-99580d00cabc)
 
@@ -155,12 +153,12 @@ Iterates over each object in the items array and returns the value of the name k
 - ### Search by Index Value
 
 #### Query:
+> Retrieves the first element (index 0) from the roles array within the user object.
 
 ```bash
 jq '.user.roles[0]' data.json
 ```
 
-Retrieves the first element (index 0) from the roles array within the user object.
 
 ![image](https://github.com/user-attachments/assets/7b319199-c581-4c54-aee2-014827748901)
 
