@@ -114,6 +114,4 @@ Golang is a modern, efficient, and powerful language built with real-world softw
 | *Title*                        | *Link*                                                                                      |
 |----------------------------------|-----------------------------------------------------------------------------------------------|
 | Official Go Documentation  | [Link](https://golang.org/doc/) |
-| Go by Example | [Link](https://gobyexample.com/) |
 | Go Programming Language Tour| [Link](https://tour.golang.org/) |
-| Go Wiki on GitHub | [Link](https://github.com/golang/go/wiki) |
