@@ -26,6 +26,7 @@
   * [Understanding systemd](#understanding-systemd)
   * [Common Service Commands](#common-service-commands)
   * [Essential Ubuntu Services](#essential-ubuntu-services)
+* [Conclusion](#conclusion) 
 * [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
 * [Conclusion](#conclusion)
 * [Contact Information](#contact-information)
@@ -154,6 +155,12 @@ sudo systemctl status apache2
 | networking | Network configuration management | Enabled        |
 | apache2    | Web server (manual installation) | Optional       |
 
+---
+
+
+## Conclusion
+
+Ubuntu is a comprehensive, flexible, and secure Linux operating system suitable for users ranging from beginners to professionals. Understanding its architecture, software handling mechanisms, and service management provides a solid foundation for working in modern IT environments.
 
 
 ---
@@ -182,16 +189,7 @@ Systemd is the default init system and service manager in Ubuntu. It handles sys
 #### 5. What are Snap packages and how are they different from APT?
 Snap packages are containerized, isolated apps with bundled dependencies. They are cross-distribution, auto-updating, and managed via `snapd`, whereas APT is used for traditional `.deb` packages tied to the system.
 
-#### 6. Can Ubuntu be used for programming and DevOps?
-Yes. Ubuntu supports a wide range of programming languages, tools (Python, Java, Git, Docker, etc.), and DevOps frameworks (Jenkins, Ansible, Kubernetes).
 
-
----
-
-
-## Conclusion
-
-Ubuntu is a comprehensive, flexible, and secure Linux operating system suitable for users ranging from beginners to professionals. Understanding its architecture, software handling mechanisms, and service management provides a solid foundation for working in modern IT environments.
 
 ---
 
