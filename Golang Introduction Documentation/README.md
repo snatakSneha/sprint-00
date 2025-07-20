@@ -1,4 +1,11 @@
 # Golang Introduction Documentation
+## Software Name
+Golang (Go Programming Language)
+
+## Software Category
+Programming Language
+
+
 <img width="299" height="169" alt="image" src="https://github.com/user-attachments/assets/fc98cf16-dd2f-480c-ac44-01c1bb9957ed" />
 
 ---
@@ -17,9 +24,10 @@
 3. [Why Go?](#why-go)
 4. [Primary Use Cases](#primary-use-cases)
 5. [Key Features](#key-features)
-6. [Conclusion](#conclusion)
-7. [Contacts](#contacts)
-8. [References](#references)
+6. [FAQs](#faqs)
+7. [Conclusion](#conclusion)
+8. [Contacts](#contacts)
+9. [References](#references)
 
 
 ---
@@ -92,6 +100,35 @@ Go solves these issues through:
 | **Fast Compilation**     | Optimized compiler with very quick build times                            |
 | **Cross-Platform**       | Easily build binaries for different OS/architectures                      |
 | **Tooling**              | Comes with built-in formatting, linting, testing, and documentation tools |
+
+---
+
+## FAQs
+
+#### 1. What is Golang used for?
+Golang is used for building fast, scalable, and efficient applications such as APIs, web servers, DevOps tools, and distributed systems (like Kubernetes).
+
+#### 2. How do I install Golang on Linux?
+Run:
+
+```bash
+sudo apt install golang-go
+```
+
+#### 3. How do I run a Go program?
+Create a .go file and run:
+
+```bash
+go run filename.go
+```
+
+#### 4. What is package main in Go?
+package main defines the entry point of a standalone executable application.
+
+#### 5. How is Go different from Python or C?
+- Faster than Python (compiled)
+- Simpler than C (memory-safe, garbage collection)
+- Easier syntax and faster concurrency with goroutines
 
 ---
 
