@@ -18,7 +18,6 @@
    - [Ubuntu](#ubuntu)  
    - [RedHat](#redhat)  
    - [macOS](#macos)  
-   - [Windows](#windows)  
 3. [Example JSON Data](#example-json-data)  
 4. [Basic Usage](#basic-usage)  
 5. [Advanced Queries](#advanced-queries)
@@ -49,16 +48,16 @@ This documentation outlines practical value of the jq command-line tool, highlig
 
 ### Check for Existing Installation
 
-Before installing, check if jq is already present:
+*Before installing, check if jq is already present:*
 
 ```bash
 jq --version
 ```
 ![image](https://github.com/user-attachments/assets/ba0e1885-a62b-4aac-8292-5bec740402c5)
 
-If this command returns a version (e.g., jq-1.6), you already have it installed.
+*If this command returns a version (e.g., jq-1.6), you already have it installed.*
 
-### Ubuntu
+- #### Ubuntu
 > Update your system 
 
 ```bash
@@ -70,31 +69,26 @@ sudo apt install jq -y
 
 ![image](https://github.com/user-attachments/assets/2cfce514-70b5-426e-8a2f-8951b4a88035)
 
-### RedHat
+- #### RedHat
 
 ```bash
 sudo yum install epel-release -y
 sudo yum install jq -y
 ```
 
-### macOS
+- #### macOS
 
 ```bash
 brew install jq
 ```
 
-### Windows
-
-- Download the .exe file from the [official GitHub releases](https://github.com/stedolan/jq/releases)
-- Add the directory containing the .exe to your system’s PATH environment variable
-
 ---
 
 ## Example JSON Data
 
-Save the following content in a file called data.json for practice:
+*Save the following content in a file called data.json for practice:*
 
-json
+```json
 {
   "user": {
     "name": "Alice",
@@ -110,28 +104,28 @@ json
     {"id": 2, "name": "Item Two"}
   ]
 }
-
+```
 ![image](https://github.com/user-attachments/assets/6ce30a9a-3f01-4313-aed0-eb9425f2e46a)
 
 ---
 
 ## Basic Usage
 
-### View Entire JSON
+- ### View Entire JSON
 
-bash
+```bash
 cat data.json | jq '.'
-
-# Prints the entire contents of the JSON file in a human-readable and color-formatted layout.
+```
+*Prints the entire contents of the JSON file in a human-readable and color-formatted layout.*
 
 ![image](https://github.com/user-attachments/assets/559b24f4-8ff8-4580-b58f-d5193974c0cd)
 
-### Filter a Field
+- ### Filter a Field
 
-bash
+```bash
 jq '.user.name' data.json
-
-# Extracts and displays the value of the name field nested inside the user object.
+```
+*Extracts and displays the value of the name field nested inside the user object.*
 
 ![image](https://github.com/user-attachments/assets/9b28d42b-3a56-4f42-8177-facc26df5ec3)
 
@@ -139,33 +133,34 @@ jq '.user.name' data.json
 
 ## Advanced Queries
 
-### Access Nested Values
+- ### Access Nested Values
 
-bash
+```bash
 jq '.user.address.city' data.json
-
-# Accesses the nested city field inside address, which is itself a key inside the user object.
+```
+*Accesses the nested city field inside address, which is itself a key inside the user object.*
 
 ![image](https://github.com/user-attachments/assets/38aa411d-b038-480c-9c99-9693025cfbf5)
 
-### Loop Over Arrays
+- ### Loop Over Arrays
 
-bash
+```bash
 jq '.items[] | .name' data.json
-
-# Iterates over each object in the items array and returns the value of the name key for each item.
+```
+*Iterates over each object in the items array and returns the value of the name key for each item.*
 
 ![image](https://github.com/user-attachments/assets/390601ae-ae3c-4f76-b494-99580d00cabc)
 
 
-### Search by Index Value
+- ### Search by Index Value
 
 #### Query:
 
-bash
+```bash
 jq '.user.roles[0]' data.json
+```
 
-# Retrieves the first element (index 0) from the roles array within the user object.
+*Retrieves the first element (index 0) from the roles array within the user object.*
 
 ![image](https://github.com/user-attachments/assets/7b319199-c581-4c54-aee2-014827748901)
 
@@ -194,65 +189,65 @@ This section outlines common issues users may encounter when using jq and how to
 
 ---
 
-### 1. File Not Found
+- ###  File Not Found
 
-bash
+```bash
 jq '.' data.json
 
 jq: error: Could not open file data.json: No such file or directory
-
+```
 
 *Cause:* File data.json doesn't exist in the current directory. 
 *Fix:* Ensure the file is present and the path is correct.
 
 ---
 
-### 2. Invalid JSON Format
+- ###  Invalid JSON Format
 
-
+```bash
 cat broken.json | jq '.'
 
 parse error: Unfinished JSON...
-
+```
 
 *Cause:* The JSON file is not properly formatted (e.g., missing commas, brackets, quotes).  
 *Fix:* Validate the JSON using a linter or online JSON validator before using jq.
 
 ---
 
-### 3. Null Output
+- ###  Null Output
 
-
+```bash
 jq '.user.phone' data.json
 
 null
-
+```
 
 *Cause:* The queried field does not exist in the JSON.  
 *Fix:* Double-check the field name and structure. Use jq 'keys' or jq '.' to inspect structure first.
 
 ---
 
-### 4. Index Out of Range
+- ###  Index Out of Range
 
-
+```bash
 jq '.user.roles[5]' data.json
 
 null
-
+```
 
 *Cause:* You're accessing an index that doesn’t exist in the array.  
 *Fix:* Use jq '.user.roles | length' to verify array size before indexing.
 
 ---
 
-### 5. Permission Denied 
+- ###  Permission Denied 
 
-
+```bash
 jq '.' /root/data.json
 
 jq: error: Could not open file /root/data.json: Permission denied
-
+```
 
 *Cause:* File is not readable by the current user.  
 *Fix:* Run with elevated permissions (e.g., sudo) or change file permissions.
