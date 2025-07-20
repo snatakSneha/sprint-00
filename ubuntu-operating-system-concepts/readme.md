@@ -1,5 +1,6 @@
 # Ubuntu Operating System Concepts
 
+<img width="512" height="180" alt="image" src="https://github.com/user-attachments/assets/4613c6cb-ebcd-4625-bcec-fd2eb5d6af49" />
 
 ---
 
