@@ -60,9 +60,10 @@ If this command returns a version (e.g., jq-1.6), you already have it installed.
 
 ### Ubuntu
 > Update your system 
-> - [Ubuntu Basic System Commands](https://github.com/snaatak-Downtime-Crew/Documentation/blob/durgesh_scrums_3/common_stack/operating_system/ubuntu/sop/commoncommands/README.md#1-basic-system-commands)
-bash
+
+```bash
 sudo apt install jq -y
+```
 
 ![image](https://github.com/user-attachments/assets/a03f59b7-09cb-4c40-9a96-d897e00845cb)
 
@@ -71,16 +72,16 @@ sudo apt install jq -y
 
 ### RedHat
 
-bash
+```bash
 sudo yum install epel-release -y
 sudo yum install jq -y
-
+```
 
 ### macOS
 
-bash
+```bash
 brew install jq
-
+```
 
 ### Windows
 
