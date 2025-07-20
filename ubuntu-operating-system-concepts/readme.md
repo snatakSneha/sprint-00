@@ -72,7 +72,7 @@ Ubuntu's structure is layered to ensure modularity and stability. The simplified
 * **Shell and GUI**: Bash shell, GNOME desktop environment.
 * **Applications Layer**: Software installed via APT, Snap, or GUI.
 
-*Insert Diagram: `assets/ubuntu-architecture.png`*
+<img width="1024" height="1024" alt="ChatGPT Image Jul 20, 2025, 11_00_35 AM" src="https://github.com/user-attachments/assets/0b1214c5-3483-4199-96e8-675d90d7ba98" />
 
 ---
 
