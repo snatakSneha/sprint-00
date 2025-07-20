@@ -113,7 +113,9 @@ sudo apt install synaptic
 
 ## Software Management Flowchart
 
-*Insert Flowchart: `assets/software-flowchart.png`*
+
+<img width="1024" height="1536" alt="Software Management Process Flowchart" src="https://github.com/user-attachments/assets/6fc0a7b0-60b9-4211-8691-0aea8717429d" />
+
 
 ---
 
