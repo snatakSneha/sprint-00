@@ -43,12 +43,12 @@ The requirements.txt file is a plain text file used in Python projects to list a
 
 ## Why Use requirements.txt
 
-| *Reason*                       | *Explanation*                                                                                      |
+| **Reason**                       | **Explanation**                                                                                      |
 |----------------------------------|--------------------------------------------------------------------------------------------------------|
-| *Consistency Across Environments* | Ensures everyone uses the same package versions, preventing "it works on my machine" issues.         |
-| *Ease of Setup*               | Enables quick installation of dependencies using one command: pip install -r requirements.txt      |
-| *Reliable Deployments*        | Locks package versions to prevent unexpected behavior from version upgrades.                         |
-| *Simplifies Dependency Tracking* | Easier to audit, update, and manage all third-party packages in one file.                             |
+| **Consistency Across Environments** | Ensures everyone uses the same package versions, preventing "it works on my machine" issues.         |
+| **Ease of Setup**               | Enables quick installation of dependencies using one command: pip install -r requirements.txt      |
+| **Reliable Deployments**        | Locks package versions to prevent unexpected behavior from version upgrades.                         |
+| **Simplifies Dependency Tracking** | Easier to audit, update, and manage all third-party packages in one file.                             |
 
 ---
 
@@ -58,7 +58,7 @@ Creating and using a requirements.txt file is straightforward and plays a critic
 
 ### Step 1: Create a Virtual Environment
 
-First, set up a virtual environment to isolate your project's dependencies.
+> First, set up a virtual environment to isolate your project's dependencies.
 
 ```bash
 python -m venv venv  
@@ -68,7 +68,7 @@ venv\Scripts\activate     #(on Windows)
 
 ### Step 2: Install the Required Packages
 
-Install the packages you need for your project using pip.
+> Install the packages you need for your project using pip.
 
 ```bash
 pip install flask  
@@ -77,7 +77,7 @@ pip install requests
 
 ### Step 3: Generate the requirements.txt File
 
-Once all necessary packages are installed, generate the requirements.txt file with:
+> Once all necessary packages are installed, generate the requirements.txt file with:
 
 ```bash
 pip freeze > requirements.txt
@@ -87,7 +87,7 @@ This captures all installed packages and their exact versions into the file.
 
 ### Step 4: Share or Use the File in Other Environments
 
-Anyone working on the same project can install all dependencies listed in requirements.txt using:
+> Anyone working on the same project can install all dependencies listed in requirements.txt using:
 
 ```bash
 pip install -r requirements.txt
@@ -101,10 +101,10 @@ This ensures consistent and reproducible environments across all systems.
 
 | *Scenario*             | **How requirements.txt Helps**                                                                 |
 |--------------------------|--------------------------------------------------------------------------------------------------|
-| *Development*          | New developers can install all dependencies quickly and reliably.                               |
-| *CI/CD Pipelines*      | Automated systems can replicate the environment consistently for testing and deployment.        |
-| *Production*           | Ensures stable and tested versions are used in live environments.                              |
-| *Debugging & Reproducibility* | Helps recreate specific environments to trace and fix bugs easily.                             |
+| **Development**          | New developers can install all dependencies quickly and reliably.                               |
+| **CI/CD Pipelines**      | Automated systems can replicate the environment consistently for testing and deployment.        |
+| **Production**           | Ensures stable and tested versions are used in live environments.                              |
+| **Debugging & Reproducibility** | Helps recreate specific environments to trace and fix bugs easily.                             |
 
 ---
 
@@ -112,7 +112,7 @@ This ensures consistent and reproducible environments across all systems.
 
 ### 1. Use Exact Version Pinning
 
-Pin dependencies to *exact versions* to avoid unexpected changes when installing packages across different environments or machines. This ensures that your application always uses the same, tested version of a package.
+> Pin dependencies to *exact versions* to avoid unexpected changes when installing packages across different environments or machines. This ensures that your application always uses the same, tested version of a package.
 
 ```bash
 flask==2.1.3 \
@@ -129,16 +129,16 @@ sqlalchemy==1.4.46
 
 ### 2. Avoid Loose Versioning
 
-Avoid using version specifiers like >=, <=, or leaving versions blank. Loose versioning can introduce breaking changes when packages update in the background.
+> Avoid using version specifiers like >=, <=, or leaving versions blank. Loose versioning can introduce breaking changes when packages update in the background.
 
-*Not Recommended:* \
+**Not Recommended:** 
 
 ```bash
 flask \
 requests>=2.0 
 ```
 
-*Recommended:* \
+**Recommended:** 
 
 ```bash
 flask==2.1.3 \
@@ -155,20 +155,20 @@ requests==2.28.1
 
 Keep production dependencies clean by separating development-only tools like testing frameworks and linters. This can be done using comments in the same file or separate files like dev-requirements.txt.
 
-*Example:* \
+**Example:** 
 ```bash
 Production \
 flask==2.1.3 
 ```
 
 
-Development \
+**Development**
 ```bash
 pytest==7.2.1 \
 black==23.1.0 
 ```
 
-Example using separate files:
+> Example using separate files:
 
 
 requirements.txt → Production
@@ -183,7 +183,7 @@ dev-requirements.txt → Development (includes linters, formatters, test tools)
 
 ### 4. Use pip freeze to Lock All Installed Packages
 
-After setting up your virtual environment and installing required packages, use the following command to lock the current state:
+> After setting up your virtual environment and installing required packages, use the following command to lock the current state:
 
 ```bash
 pip freeze > requirements.txt 
@@ -201,7 +201,7 @@ pip freeze > requirements.txt
 
 ### 5. Consider Using Hashes for Security
 
-To ensure package integrity and prevent tampering, add hashes to your dependencies using tools like pip-tools.
+> To ensure package integrity and prevent tampering, add hashes to your dependencies using tools like pip-tools.
 
 ```bash
 requests==2.28.1 \
@@ -218,7 +218,7 @@ requests==2.28.1 \
 
 ## Syntax of requirements.txt
 
-| *Syntax*                          | *Description*                                                   | *Example*                         |
+| **Syntax**                          | **Description**                                                   | **Example**                         |
 |------------------------------------|-------------------------------------------------------------------|-------------------------------------|
 | package                          | Installs the latest version of a package                          | flask                             |
 | package==version                 | Installs the exact version                                        | requests==2.28.1                  |
@@ -242,15 +242,15 @@ sqlalchemy>=1.4 \
 
 ## Difference Between pip with requirements.txt and pip for single module
 
-| *Aspect*               | **requirements.txt**                                             | **pip Command**                                            |
+| **Aspect**              | **requirements.txt**                                             | **pip Command**                                            |
 |--------------------------|---------------------------------------------------------------------|--------------------------------------------------------------|
-| *Purpose*              | Stores a list of dependencies for reuse and sharing                | Installs packages one-by-one or from a requirements file     |
-| *Format*               | Plain text file listing packages and versions                     | Command-line tool for Python package installation            |
-| *Usage*                | Used with pip install -r requirements.txt                       | Used as pip install <package>                             |
-| *Reproducibility*      | Promotes consistent environments across systems                    | Manual installs may vary over time                           |
-| *Version Control*      | Can be committed to version control for collaboration              | Pip commands are transient (used interactively)              |
-| *Dependency Tracking*  | Can include pinned versions, hashes, and comments                  | Tracks only what’s installed at that moment                  |
-| *Automation*           | Easily integrates with CI/CD tools for automation                  | Less structured for automation                              |
+| **Purpose**              | Stores a list of dependencies for reuse and sharing                | Installs packages one-by-one or from a requirements file     |
+| **Format**               | Plain text file listing packages and versions                     | Command-line tool for Python package installation            |
+| **Usage**                | Used with pip install -r requirements.txt                       | Used as pip install <package>                             |
+| **Reproducibility**      | Promotes consistent environments across systems                    | Manual installs may vary over time                           |
+| **Version Control**      | Can be committed to version control for collaboration              | Pip commands are transient (used interactively)              |
+| **Dependency Tracking**  | Can include pinned versions, hashes, and comments                  | Tracks only what’s installed at that moment                  |
+| **Automation**           | Easily integrates with CI/CD tools for automation                  | Less structured for automation                              |
 
 
 ---
@@ -262,12 +262,12 @@ Poetry is a modern Python dependency management tool that uses `pyproject.toml` 
 
 ### Why Use Poetry?
 
-| Feature            | Benefit                                        |
+| **Feature**            | **Benefit **                                       |
 | ------------------ | ---------------------------------------------- |
-| Central Config     | `pyproject.toml` holds metadata + dependencies |
-| Dependency Locking | `poetry.lock` ensures exact reproducibility    |
-| Built-in venv      | Manages virtual environment automatically      |
-| Publish Friendly   | Easy to publish packages to PyPI               |
+| **Central Config**     | `pyproject.toml` holds metadata + dependencies |
+| **Dependency Locking** | `poetry.lock` ensures exact reproducibility    |
+| **Built-in venv**      | Manages virtual environment automatically      |
+| **Publish Friendly**   | Easy to publish packages to PyPI               |
 
 ### Basic Poetry Commands
 
@@ -289,7 +289,7 @@ poetry export -f requirements.txt --output requirements.txt --without-hashes
 
 ## FAQs
 
-### 1. **Can I use multiple requirements files for different environments?**
+### 1. Can I use multiple requirements files for different environments?
 
 Yes. You can separate files like:
 
@@ -304,7 +304,7 @@ pip install -r dev-requirements.txt
 
 ---
 
-### 2. **How do I update a specific package and reflect that in requirements.txt?**
+### 2. How do I update a specific package and reflect that in requirements.txt?
 
 1. Update the package:
 
@@ -320,14 +320,14 @@ pip freeze > requirements.txt
 
 ---
 
-### 3. **What happens if a package is missing from requirements.txt?**
+### 3. What happens if a package is missing from requirements.txt?
 
 If a dependency is not listed, it won't be installed during setup, which can cause runtime errors like `ModuleNotFoundError`. Always keep the file updated using `pip freeze`.
 
 
 ---
 
-### 4. **How can I install only dev tools for local testing?**
+### 4. How can I install only dev tools for local testing?
 
 If you’ve separated dev tools in `dev-requirements.txt`, just run:
 
@@ -337,7 +337,7 @@ pip install -r dev-requirements.txt
 
 ---
 
-### 5. **What is the difference between `pip freeze` and `pip list`?**
+### 5. What is the difference between `pip freeze` and `pip list`?
 
 | Command      | Purpose                                                |
 | ------------ | ------------------------------------------------------ |
@@ -360,7 +360,7 @@ The requirements.txt file is more than just a list of packages—it's a tool tha
 
 | Name         | Email Address                                 |
 |--------------|-----------------------------------------------|
-| Sneha Joshi  | sneha.joshi.snaatak@mygurukulam.co            |
+| **Sneha Joshi**  | sneha.joshi.snaatak@mygurukulam.co            |
 
 ---
 
