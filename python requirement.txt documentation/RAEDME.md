@@ -19,11 +19,12 @@
 5. [Use Cases](#use-cases)  
 6. [Best Practices](#best-practices)  
 7. [Syntax of requirements.txt](#syntax-of-requirementstxt)  
-8. [Difference Between pip with requirements.txt and pip for single module](#difference-between-pip-with-requirementstxt-and-pip-for-single-module)  
-9. [FAQs](#faqs)  
-10. [Conclusion](#conclusion)  
-11. [Contacts](#contacts)  
-12. [References](#references)  
+8. [Difference Between pip with requirements.txt and pip for single module](#difference-between-pip-with-requirementstxt-and-pip-for-single-module)
+9. [Poetry Overview](#poetry-overview) 
+10. [FAQs](#faqs)  
+11. [Conclusion](#conclusion)  
+12. [Contacts](#contacts)  
+13. [References](#references)  
 
 
 ---
@@ -224,8 +225,6 @@ requests==2.28.1 \
 | package>=version                 | Installs the specified version or newer                           | sqlalchemy>=1.4                   |
 | package<=version                 | Installs the specified version or older                           | django<=3.2                       |
 | package~=version                 | Compatible release — allows minor updates                         | pandas~=1.3.0                     |
-| -e git+URL#egg=package           | Installs directly from a Git repo in "editable" mode              | -e git+https://github.com/...     |
-| --index-url <url>                | Specifies a custom package index                                  | --index-url https://example.com  |
 | --find-links <path_or_url>       | Finds packages in local/remote locations                          | --find-links ./packages          |
 | # comment                        | Inline comments for readability                                   | flask==2.1.3  # Web framework     |
 | -r otherfile.txt                 | Includes another requirements file (like dev-requirements.txt)   | -r dev-requirements.txt          |
@@ -253,6 +252,38 @@ sqlalchemy>=1.4 \
 | *Dependency Tracking*  | Can include pinned versions, hashes, and comments                  | Tracks only what’s installed at that moment                  |
 | *Automation*           | Easily integrates with CI/CD tools for automation                  | Less structured for automation                              |
 
+
+---
+## Poetry Overview
+
+### What is Poetry?
+
+Poetry is a modern Python dependency management tool that uses `pyproject.toml` instead of `requirements.txt`.
+
+### Why Use Poetry?
+
+| Feature            | Benefit                                        |
+| ------------------ | ---------------------------------------------- |
+| Central Config     | `pyproject.toml` holds metadata + dependencies |
+| Dependency Locking | `poetry.lock` ensures exact reproducibility    |
+| Built-in venv      | Manages virtual environment automatically      |
+| Publish Friendly   | Easy to publish packages to PyPI               |
+
+### Basic Poetry Commands
+
+```bash
+poetry init                   # Start a new project
+poetry add flask              # Add package
+poetry install                # Install all packages
+poetry update                 # Update packages
+poetry shell                  # Enter venv
+```
+
+### Exporting requirements.txt from Poetry
+
+```bash
+poetry export -f requirements.txt --output requirements.txt --without-hashes
+```
 
 ---
 
