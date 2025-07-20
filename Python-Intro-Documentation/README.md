@@ -12,10 +12,11 @@ Programming Language
 
 ---
 
+### Author Metadata
 
-| Author      | Created on | Version   | Last updated by | Last edited on |
-| ----------- | ---------- | --------- | --------------- | -------------- |
-| Sneha Joshi | 18-07-25   | version 1 | Sneha Joshi     | 18-07-25       |
+| Created     | Version | Author        | Modifed | Comment           | Reviewer         |
+|-------------|---------|---------------|-------|------------|------------------|
+| 17-07-2025  |  V1     | Sneha Joshi   | 17-07-2025 | Internal Review   | Siddharth Pawar  |
 
 ---
 
