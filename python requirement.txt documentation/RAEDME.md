@@ -2,11 +2,11 @@
 <img width="850" height="350" alt="image" src="https://github.com/user-attachments/assets/f8ac0b19-774b-426b-b47b-24f4d1fdbb52" />
 
 
-## Author Metadata
+### Author Metadata
 
-| Author      | Created on | Version   | Last updated by | Last edited on |
-| ----------- | ---------- | --------- | --------------- | -------------- |
-| Sneha Joshi | 18-07-25   | version 1 | Sneha Joshi     | 18-07-25       |
+| Created     | Version | Author        | Modifed | Comment           | Reviewer         |
+|-------------|---------|---------------|-------|------------|------------------|
+| 18-07-2025  |  V1     | Sneha Joshi   | 18-07-2025 | Internal Review   | Siddharth Pawar  |
 
 ---
 
