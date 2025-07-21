@@ -8,18 +8,19 @@
 
 ---
 
+
 ## Table of Contents
 
-1. Introduction  
-2. What is the CD Workflow?  
-3. CD Workflow Diagram  
-4. CD Workflow Explanation  
-5. Best Practices  
-6. Troubleshooting  
-7. Frequently Asked Questions (FAQs)  
-8. Conclusion  
-9. Contacts  
-10. References  
+1. [Introduction](#1-introduction)  
+2. [What is the CD Workflow?](#2-what-is-the-cd-workflow)  
+3. [CD Workflow Diagram](#3-cd-workflow-diagram)  
+4. [CD Workflow Explanation](#4-cd-workflow-explanation)  
+5. [Best Practices](#5-best-practices)  
+6. [Troubleshooting](#6-troubleshooting)  
+7. [Frequently Asked Questions (FAQs)](#7-frequently-asked-questions-faqs)  
+8. [Conclusion](#8-conclusion)  
+9. [Contacts](#9-contacts)  
+10. [References](#10-references)
 
 ---
 
@@ -46,9 +47,6 @@ The CD workflow typically includes:
 
 ## 3. CD Workflow Diagram
 
-<p align="center">
-  <img src="https://github.com/vardaan412/Images/blob/main/CD.png?raw=true" alt="CD Workflow Diagram" />
-</p>
 
 ---
 
@@ -192,6 +190,5 @@ A well-defined CD workflow for Ansible roles ensures efficient and reliable depl
 | Molecule              | [https://molecule.readthedocs.io/en/latest/](https://molecule.readthedocs.io/en/latest/)                                        |
 | Ansible Galaxy Roles  | [https://galaxy.ansible.com/](https://galaxy.ansible.com/)                                                                      |
 
-```
 
----
+
