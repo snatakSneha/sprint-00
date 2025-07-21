@@ -64,7 +64,7 @@ Ensure the target systems are accessible via SSH and ready for deployment.
 
 ```bash
 ansible all -m ping -i inventory/
-````
+```
 
 ### Step 2: Clone or Package Role
 
