@@ -1,6 +1,7 @@
 # Ansible Role CD Workflow Guide
+<img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/2fa29b92-fd84-4352-abed-63add4b93b66" />
 
-
+---
 
 | Created     | Last Updated | Version | Author       | Comment       | Reviewer |
 |-------------|--------------|---------|--------------|----------------|----------|
@@ -24,13 +25,13 @@
 
 ---
 
-## 1. Introduction
+##  Introduction
 
 This document provides a detailed overview of the Continuous Deployment (CD) workflow for Ansible roles. It describes how to automate and manage the deployment of infrastructure roles across various environments using Ansible playbooks, roles, inventories, and external tools.
 
 ---
 
-## 2. What is the CD Workflow?
+##  What is the CD Workflow?
 
 The Continuous Deployment workflow ensures that validated infrastructure code is automatically deployed to target environments like staging or production. It reduces manual intervention, promotes consistency, and increases release confidence.
 
@@ -45,12 +46,12 @@ The CD workflow typically includes:
 
 ---
 
-## 3. CD Workflow Diagram
+##  CD Workflow Diagram
 
 
 ---
 
-## 4. CD Workflow Explanation
+##  CD Workflow Explanation
 
 ### Step 1: Prepare Target Environment  
 Ensure the target systems are accessible via SSH and ready for deployment.
@@ -112,7 +113,7 @@ echo "Deployment Successful" | mail -s "Deployment Report" team@example.com
 
 ---
 
-## 5. Best Practices
+##  Best Practices
 
 | No. | Practice                                                                    |
 | --- | --------------------------------------------------------------------------- |
@@ -126,7 +127,7 @@ echo "Deployment Successful" | mail -s "Deployment Report" team@example.com
 
 ---
 
-## 6. Troubleshooting
+##  Troubleshooting
 
 | Issue                  | Resolution                                                                  |
 | ---------------------- | --------------------------------------------------------------------------- |
@@ -139,40 +140,40 @@ echo "Deployment Successful" | mail -s "Deployment Report" team@example.com
 
 ---
 
-## 7. Frequently Asked Questions (FAQs)
+##  Frequently Asked Questions (FAQs)
 
-**Q1: Can I use the same role for multiple environments like dev, staging, and prod?**
+#### Q1: Can I use the same role for multiple environments like dev, staging, and prod?
 Yes. Structure your inventory and variables in separate folders (e.g., `inventory/dev/`, `inventory/staging/`, `inventory/prod/`) and pass environment-specific parameters through `group_vars` or `--extra-vars`.
 
----
 
-**Q2: What is the best way to handle secrets in deployment?**
+
+#### Q2: What is the best way to handle secrets in deployment?
 Use `ansible-vault` to encrypt secrets or integrate tools like HashiCorp Vault for external secret management. Never store plaintext secrets in your Git repository.
 
----
 
-**Q3: How can I roll back if something fails during deployment?**
+
+#### Q3: How can I roll back if something fails during deployment?
 You can design rollback tasks/playbooks or use version-controlled roles where a previous version can be re-deployed. Maintain proper backups and use handlers with `when` conditions to prevent unintended changes.
 
----
 
-**Q4: What’s the difference between CI and CD in Ansible workflows?**
+
+#### Q4: What’s the difference between CI and CD in Ansible workflows?
 CI (Continuous Integration) focuses on linting, syntax checks, and test validations without actual deployment. CD (Continuous Deployment) includes actual playbook execution and changes to the target systems.
 
----
 
-**Q5: Should I use `ansible-pull` or `ansible-playbook` for CD?**
+
+#### Q5: Should I use `ansible-pull` or `ansible-playbook` for CD?
 For most server-side orchestrated CD pipelines (like GitLab, Jenkins), use `ansible-playbook`. Use `ansible-pull` only for decentralized or agent-based deployments where each host pulls and applies changes itself.
 
 ---
 
-## 8. Conclusion
+##  Conclusion
 
 A well-defined CD workflow for Ansible roles ensures efficient and reliable deployments across environments. By automating these steps, teams can eliminate manual errors, reduce deployment time, and ensure consistency in infrastructure provisioning.
 
 ---
 
-## 9. Contacts
+##  Contacts
 
 | Name        | Email                                                     |
 | ----------- | --------------------------------------------------------- |
@@ -180,7 +181,7 @@ A well-defined CD workflow for Ansible roles ensures efficient and reliable depl
 
 ---
 
-## 10. References
+##  References
 
 | Resource              | Link                                                                                                                            |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
