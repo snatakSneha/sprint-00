@@ -1,7 +1,8 @@
 # Ansible Role CD Workflow Guide
-<p align="center">
+<p align="left">
   <img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/2fa29b92-fd84-4352-abed-63add4b93b66" />
 </p>
+
 ---
 
 | Created     | Last Updated | Version | Author       | Comment       | Reviewer |
@@ -192,8 +193,7 @@ A well-defined CD workflow for Ansible roles ensures efficient and reliable depl
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | Ansible Official Docs | [https://docs.ansible.com/](https://docs.ansible.com/)                                                                          |
 | Ansible Vault         | [https://docs.ansible.com/ansible/latest/user\_guide/vault.html](https://docs.ansible.com/ansible/latest/user_guide/vault.html) |
-| GitLab CD Pipelines   | [https://docs.gitlab.com/ee/ci/](https://docs.gitlab.com/ee/ci/)                                                                |
-| Molecule              | [https://molecule.readthedocs.io/en/latest/](https://molecule.readthedocs.io/en/latest/)                                        |
+| GitLab CD Pipelines   | [https://docs.gitlab.com/ee/ci/](https://docs.gitlab.com/ee/ci/)                                                                |                                  |
 | Ansible Galaxy Roles  | [https://galaxy.ansible.com/](https://galaxy.ansible.com/)                                                                      |
 
 
