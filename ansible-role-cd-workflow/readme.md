@@ -1,6 +1,7 @@
 # Ansible Role CD Workflow Guide
-<img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/2fa29b92-fd84-4352-abed-63add4b93b66" />
-
+<p align="center">
+  <img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/2fa29b92-fd84-4352-abed-63add4b93b66" />
+</p>
 ---
 
 | Created     | Last Updated | Version | Author       | Comment       | Reviewer |
@@ -47,6 +48,10 @@ The CD workflow typically includes:
 ---
 
 ##  CD Workflow Diagram
+<p align="center">
+  <img width="800" height="600" alt="ansible-cd-workflow-colorful" src="https://github.com/user-attachments/assets/86d18a2e-ff23-4a47-85b1-71a40e79206b" />
+
+</p>
 
 
 ---
